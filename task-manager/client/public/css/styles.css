@@ -1,0 +1,202 @@
+/* Dark Mode Variables */
+:root {
+  /* Light Mode Defaults */
+  --bg-body: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --slider-bg: #e9ecef;
+  --dropdown-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Overrides */
+  --bg-body: #1a1a2e;
+  --bg-card: #16213e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #cbd1d7;
+  --border-color: #2d3748;
+  --slider-bg: #4a5568;
+  --dropdown-bg: #2d3748;
+
+  /* Component-specific dark colors */
+  --bs-primary: #4da6ff;
+  --bs-warning: #ffc107;
+  --bs-success: #28a745;
+  --bs-danger: #dc3545;
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Progress Slider */
+.progress-slider {
+  background-color: var(--slider-bg);
+}
+
+.progress {
+  background-color: var(--slider-bg);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  background-color: var(--dropdown-bg);
+  border-color: var(--border-color);
+}
+
+.dropdown-item {
+  color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+  background-color: var(--border-color);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.form-control::placeholder{
+  color: var(--text-secondary);
+}
+
+/* Badges */
+.badge.bg-light {
+  background-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-card {
+  border-left: 4px solid;
+  margin-bottom: 10px;
+}
+
+.task-card.low {
+  border-left-color: #28a745;
+}
+
+.task-card.medium {
+  border-left-color: #ffc107;
+}
+
+.task-card.high {
+  border-left-color: #dc3545;
+}
+
+.task-status.pending {
+  color: #6c757d;
+}
+
+.task-status.in-progress {
+  color: #17a2b8;
+}
+
+.task-status.completed {
+  color: #28a745;
+}
+
+.task-actions {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.task-card:hover .task-actions {
+  opacity: 1;
+}
+
+#taskList {
+  min-height: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task-actions {
+    opacity: 1;
+  }
+}
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+.toast {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Map Preview */
+#mapPreview {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Empty State */
+.empty-state {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.empty-state:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.empty-state img {
+  opacity: 0.7;
+}
+
+
+/* Add to your CSS */
+.progress-slider {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  accent-color: var(--bs-primary);
+}
+
+.progress-slider::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+}
+
+.toast {
+  position: relative;
+  margin-bottom: 0.5rem;
+  z-index: 1100;
+}
+
+.modal-content{
+  background-color: var(--bg-body);
+}
